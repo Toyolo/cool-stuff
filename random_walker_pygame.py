@@ -21,7 +21,7 @@ class Walker:
 
     def move(self, steps):
         for _ in range(steps):
-            choice = random.randint(0, 3)  
+            choice = random.randint(0, 7)  
             self.prev_x = self.x
             self.prev_y = self.y
             if choice == 0:
@@ -31,6 +31,18 @@ class Walker:
             elif choice == 2:
                 self.y += 1
             elif choice == 3:
+                self.y -= 1
+            elif choice == 4:
+                self.x += 1
+                self.y += 1
+            elif choice == 5:
+                self.x += 1
+                self.y -= 1
+            elif choice == 6:
+                self.x -= 1
+                self.y += 1
+            elif choice == 7:
+                self.x -= 1
                 self.y -= 1
             self.color = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))  # Changes color randomly careful if you got epilepsy
 
